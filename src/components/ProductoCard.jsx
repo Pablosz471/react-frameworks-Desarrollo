@@ -26,7 +26,7 @@ function ProductoCard({ nombre, precio, imagen, stock }) {
                 </p>
 
                 <button
-                    className="btn btn-"
+                    className="btn btn-dark"
                     disabled={sinStock}
                 >
                     Agregar
