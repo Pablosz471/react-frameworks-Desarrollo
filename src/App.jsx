@@ -3,7 +3,7 @@ import Navbar from "./navbar/Navbar"
 import Footer from "./footer/Footer"
 import Esmaltes from "./assets/esmaltes.jpg"
 import cremasfaciales from "./assets/cremasfaciales.jpg"
-import productosparaelcabello from "./assets/productosparaelcabello.jpg"
+import productosparaelcabello from "./assets/productosparaelcabello.jpeg"
 
 
 const productos = [
