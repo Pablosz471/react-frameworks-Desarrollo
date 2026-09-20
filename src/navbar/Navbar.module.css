@@ -69,3 +69,7 @@
     cursor: not-allowed;       /* Muestra el ícono de "prohibido" */
     pointer-events: none;      /* EVITA QUE SE HAGA CLIC */
 }
+
+.navbar ul li a {
+    color: #3B2B1D;
+}

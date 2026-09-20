@@ -28,32 +28,35 @@ const productos = [
 
 function App() {
   return (
-    <div className="flex min-h-screen flex-col">
-
+    <div
+      className="is-flex is-flex-direction-column"
+      style={{ minHeight: '100vh' }}
+    >
       <Navbar />
 
-      <main className="flex-1 px-6 py-6">
-
-        <h1 className="mb-6 text-2xl font-semibold">
+      <main className="is-flex-grow-1 p-5">
+        <h1 className="title is-2 mb-5">
           Productos
         </h1>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="columns is-multiline">
           {productos.map((producto) => (
-            <ProductoCard
+            <div
+              className="column is-12-mobile is-4-desktop"
               key={producto.nombre}
-              nombre={producto.nombre}
-              precio={producto.precio}
-              imagen={producto.imagen}
-              stock={producto.stock}
-            />
+            >
+              <ProductoCard
+                nombre={producto.nombre}
+                precio={producto.precio}
+                imagen={producto.imagen}
+                stock={producto.stock}
+              />
+            </div>
           ))}
         </div>
-
       </main>
 
       <Footer />
-
     </div>
   )
 }
