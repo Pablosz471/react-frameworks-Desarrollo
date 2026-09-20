@@ -5,7 +5,6 @@ import Esmaltes from "./assets/esmaltes.jpg"
 import cremasfaciales from "./assets/cremasfaciales.jpg"
 import productosparaelcabello from "./assets/productosparaelcabello.jpeg"
 
-
 const productos = [
   {
     nombre: 'Esmaltes',
@@ -29,24 +28,25 @@ const productos = [
 
 function App() {
   return (
-    <div className="d-flex flex-column min-vh-100">
+    <div className="flex min-h-screen flex-col">
 
       <Navbar />
 
-      <main className="flex-grow-1 container-fluid mt-4">
+      <main className="flex-1 px-6 py-6">
 
-        <h1 className="mb-4">Productos</h1>
+        <h1 className="mb-6 text-2xl font-semibold">
+          Productos
+        </h1>
 
-        <div className="row">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {productos.map((producto) => (
-            <div className="col-md-4 mb-4" key={producto.nombre}>
-              <ProductoCard
-                nombre={producto.nombre}
-                precio={producto.precio}
-                imagen={producto.imagen}
-                stock={producto.stock}
-              />
-            </div>
+            <ProductoCard
+              key={producto.nombre}
+              nombre={producto.nombre}
+              precio={producto.precio}
+              imagen={producto.imagen}
+              stock={producto.stock}
+            />
           ))}
         </div>
 
